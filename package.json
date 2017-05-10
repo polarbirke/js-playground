@@ -1,0 +1,22 @@
+{
+  "name": "js-playground",
+  "version": "1.0.0",
+  "description": "Playing with yarn and webpack 2",
+  "main": "main.js",
+  "scripts": {
+    "test": "babel-tape-runner './src/test/**/*.js' | tap-spec",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "polarbirke",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-tape-runner": "^2.0.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "^2.5.1"
+  },
+  "dependencies": {}
+}
