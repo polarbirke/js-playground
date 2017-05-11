@@ -1,23 +1,26 @@
 {
   "name": "js-playground",
   "version": "1.0.0",
-  "description": "Playing with yarn and webpack 2",
+  "description": "Playing with yarn, es2015 (babel), tape and rollup",
   "main": "main.js",
   "scripts": {
     "test": "babel-tape-runner './src/test/**/*.js' | tap-spec",
-    "build": "webpack"
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "polarbirke",
   "license": "ISC",
   "devDependencies": {
-    "babel-loader": "^7.0.0",
+    "babel-core": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "babel-tape-runner": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-file": "^0.3.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.3",
-    "uglifyjs-webpack-plugin": "^0.4.3",
-    "webpack": "^2.5.1"
+    "tape": "^4.6.3"
   },
   "dependencies": {}
 }
