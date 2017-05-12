@@ -1,5 +1,13 @@
 A safe place to mess around with "shiny new hotness" like Yarn, Webpack 2, ES2015, etc.
 
+## Install
+
+Install and build the project and run it in a simple docker-container. 
+
+```sh
+bash install.sh 
+```
+
 ## Getting started
 
 If you want to try out Yarn, you may need to install it first. Follow the instructions on https://yarnpkg.com/en/docs/install depending on your setup!
