@@ -29,7 +29,7 @@ gulp.task('build', () => {
     })
     .then(function (bundle) {
         bundle.write({
-            format: 'umd',
+            format: 'iife',
             moduleName: 'tracking',
             dest: './dist/ck.core.tracking.js',
             sourceMap: true
