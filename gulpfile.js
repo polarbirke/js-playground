@@ -4,7 +4,7 @@ const babel = require('rollup-plugin-babel');
 const eslint = require('gulp-eslint');
 
 gulp.task('lint', () => {
-    return gulp.src(['**/*.js','!node_modules/**', '!src/test/**', '!dist/**', '!gulpfile.js'])
+    return gulp.src(['src/**/*.js'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
