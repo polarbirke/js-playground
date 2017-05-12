@@ -1,17 +1,24 @@
-var gulp = require('gulp');
-var file = require('gulp-file');
-var rollup = require('rollup');
-var babel = require('rollup-plugin-babel');
+const gulp = require('gulp');
+const rollup = require('rollup');
+const babel = require('rollup-plugin-babel');
+const eslint = require('gulp-eslint');
 
-gulp.task('build', function () {
+gulp.task('lint', () => {
+    return gulp.src(['**/*.js','!node_modules/**', '!src/test/**', '!dist/**', '!gulpfile.js'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
+});
+
+gulp.task('build', () => {
     return rollup.rollup({
-        entry: "./src/main.js",
+        entry: './src/main.js',
         plugins: [
             babel({
                 presets: [
                     [
-                        "es2015", {
-                        "modules": false
+                        'es2015', {
+                        'modules': false
                     }
                     ]
                 ],
@@ -22,9 +29,9 @@ gulp.task('build', function () {
     })
     .then(function (bundle) {
         bundle.write({
-            format: "umd",
-            moduleName: "tracking",
-            dest: "./dist/ck.core.tracking.js",
+            format: 'umd',
+            moduleName: 'tracking',
+            dest: './dist/ck.core.tracking.js',
             sourceMap: true
         });
     })
