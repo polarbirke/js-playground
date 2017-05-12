@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+MAINTAINER Team Turtles (Chefkoch.de) "turtles@chefkoch.de"
+
 RUN apt-get update
 
 RUN apt-get -y install npm
