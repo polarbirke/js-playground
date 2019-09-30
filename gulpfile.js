@@ -12,7 +12,7 @@ gulp.task('lint', () => {
 
 gulp.task('build', () => {
     return rollup.rollup({
-        entry: './src/main.js',
+        input: './src/main.js',
         plugins: [
             babel({
                 presets: [
@@ -28,10 +28,9 @@ gulp.task('build', () => {
         ]
     })
     .then(function (bundle) {
-        bundle.write({
+        return bundle.write({
             format: 'iife',
-            moduleName: 'tracking',
-            dest: './dist/ck.core.tracking.js',
+            file: './dist/main.js',
             sourceMap: true
         });
     })

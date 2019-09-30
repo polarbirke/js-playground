@@ -8,6 +8,12 @@
     "lint": "gulp lint",
     "build": "gulp build"
   },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.js"
+    ]
+  },
   "pre-commit": [
     "lint",
     "test"
